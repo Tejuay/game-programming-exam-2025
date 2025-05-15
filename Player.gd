@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var speed = 400
 var angular_speed = PI
+@export var lives:int = 100
+
 
 
 func _process(delta):
@@ -18,5 +20,6 @@ func _process(delta):
 		velocity = Vector2.LEFT * speed
 	if Input.is_action_pressed("move_right"):
 		velocity = Vector2.RIGHT * speed
+		
 
 	position += velocity * delta
